@@ -3,5 +3,5 @@
 - Promisifying `XMLHttpRequest`.
 - Applying Generators + Promises.
 
-See the example implementation:
-codekult.github.io/generators-plus-promises
+See the example implementation:  
+https://codekult.github.io/generators-plus-promises
