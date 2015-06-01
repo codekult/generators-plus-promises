@@ -1,0 +1,24 @@
+.btn {
+
+}
+
+.code {
+    display: block;
+    max-height: 12em;
+    overflow: auto;
+    margin: 1em 0 0;
+    padding: 1em;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #eee;
+    font-family: 'Cousine', monospace;
+    background: #222;
+}
+
+.code.loading:before {
+    content: 'Fetching…'
+}
+
+.hide {
+    display: none;
+}
