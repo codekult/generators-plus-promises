@@ -6,7 +6,6 @@
 /* DOM elements */
 var btn = document.getElementById('btn'),
     code = document.getElementById('code');
-    code = document.getElementById('code');
 
 /* Hide away the async work… */
 function run(genFunc, pro) {
