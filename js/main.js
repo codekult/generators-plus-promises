@@ -7,7 +7,8 @@
 var btn = document.getElementById('btn'),
     code = document.getElementById('code');
 
-/* Hide away the async work… */
+/* Hide away the async work…
+(this can be improved, see comments at the bottom)*/
 function run(genFunc, pro) {
     var objGen = typeof genFunc === 'function' ? genFunc() : genFunc,
         pro = pro || objGen.next().value;
