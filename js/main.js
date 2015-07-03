@@ -8,14 +8,14 @@ var btn = document.getElementById('btn'),
     code = document.getElementById('code');
 
 /* Hide away the async work…
-(this can be improved, see comments at the bottom)*/
-function run(genFunc, pro) {
-    var objGen = typeof genFunc === 'function' ? genFunc() : genFunc,
-        pro = pro || objGen.next().value;
+(this can be improved a lot, see comments at the bottom)*/
+function run(genFunc, current) {
+    var genIt = typeof genFunc === 'function' ? genFunc() : genFunc,
+        current = current || genIt.next();
 
-    if (pro && (typeof pro.then) === 'function') {
-        pro.then(function (res) {
-            run(objGen, objGen.next(res).value);
+    if (current.done !== true) {
+        current.value.then(function (res) {
+            run(genIt, genIt.next(res));
         });
     }
 }
