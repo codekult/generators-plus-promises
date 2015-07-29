@@ -42,10 +42,10 @@ function *printPaymentMethods() {
     code.innerHTML = allPaymentMethodsDetails;
 }
 
-btn.onclick = function () {
+btn.addEventLister('click', function () {
     console.log('Running *printPaymentMethods…');
     run(printPaymentMethods);
-};
+});
 
 
 /**
